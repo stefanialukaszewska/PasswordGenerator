@@ -1,0 +1,56 @@
+.label{
+    -fx-font-size: 20px;
+    -fx-font-family: "Andale Mono",sans-serif ;
+}
+
+.text-field{
+    -fx-background-radius: 10px;
+}
+
+.slider{
+    -fx-max-width: 300px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.5s ease-in-out;
+    -fx-fill: grey;
+
+
+}
+.slider .track {
+    -fx-background-color: linear-gradient(to right, black, deepskyblue);
+    -fx-background-radius: 10;
+    -fx-pref-height: 6px;
+}
+
+.slider .thumb {
+    -fx-background-color: #2196F3;
+    -fx-border-color: #2196F3;
+    -fx-border-radius: 100%;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 5px;
+    -fx-pref-height: 18px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+    -fx-transition: all 0.3s ease-in-out; /* Smooth animation */
+}
+
+
+/* When user hovers over the thumb */
+.slider .thumb:hover {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-background-color: magenta;
+
+
+}
+
+.slider .track:hover{
+    -fx-background-color: magenta;
+}
+
+/* When user presses the thumb */
+.slider .thumb:pressed {
+    -fx-background-color: #f44336;
+    -fx-scale-x: 1.4;
+    -fx-scale-y: 1.4;
+}
+
+
