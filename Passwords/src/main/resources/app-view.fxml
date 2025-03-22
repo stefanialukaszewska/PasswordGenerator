@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+
 
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="AppController"
-      alignment="CENTER" spacing="20.0"
-      prefHeight="400.0" prefWidth="600.0">
+      fx:id="root"
+      styleClass="vbox"
+      prefHeight="350.0" prefWidth="550.0">
+
     <Label fx:id="title"/>
-    <TextField fx:id="password" maxWidth="200"/>
-    <Slider fx:id="slider"/>
-    <Label fx:id="passwordLength"/>
+    <HBox styleClass="hbox">
+        <HBox styleClass="hbox2">
+            <TextField fx:id="password" prefWidth="300" maxWidth="400"/>
+            <Label fx:id="howStrong"/>
+            <Button fx:id="refreshButton" styleClass="refreshButton"  onAction="#refreshPassword">↻</Button>
+        </HBox>
+        <Button fx:id="copyButton" onAction="#copyPassword">Copy</Button>
+    </HBox>
+
+
+    <VBox styleClass="vbox2">
+        <Label fx:id="customize"/>
+        <HBox styleClass="hbox">
+            <Button fx:id="minus" styleClass="sizeButton" onAction="#minusPassword">-</Button>
+            <Slider fx:id="slider" prefWidth="250"/>
+            <Button fx:id="plus" styleClass="sizeButton" onAction="#plusPassword">+</Button>
+        </HBox>
+
+        <Label fx:id="passwordLength"/>
+
+        <HBox styleClass="radioButtonsBox">
+            <RadioButton fx:id="upperChars" onAction="#radioButtonAction">ABC</RadioButton>
+            <RadioButton fx:id="lowerChars" onAction="#radioButtonAction">abc</RadioButton>
+            <RadioButton fx:id="numbers" onAction="#radioButtonAction">123</RadioButton>
+            <RadioButton fx:id="symbols" onAction="#radioButtonAction">!@#</RadioButton>
+        </HBox>
+    </VBox>
+
+
+
+
 </VBox>

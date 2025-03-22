@@ -11,12 +11,13 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
         try {
             Parent root = FXMLLoader.load(Main.class.getResource("app-view.fxml"));
-            Scene scene = new Scene(root,350,500);
+            Scene scene = new Scene(root,600,350);
             scene.getStylesheets().add(getClass().getResource("stylesheet.css").toExternalForm());
             stage.setTitle("Password Generator");
             stage.setScene(scene);
             stage.show();
-            stage.setResizable(false);
+           // stage.setResizable(false);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
