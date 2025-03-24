@@ -3,8 +3,6 @@ import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.*;
 
-import java.io.*;
-
 public class App extends Application {
 
     @Override
@@ -16,7 +14,7 @@ public class App extends Application {
             stage.setTitle("Password Generator");
             stage.setScene(scene);
             stage.show();
-           // stage.setResizable(false);
+          //  stage.setResizable(false);
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,7 +1,6 @@
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -37,7 +36,6 @@ public class AppController {
         length=10;
         radioButtonSelected();
         generator();
-       // password.setText(Generator.GeneratePassword(length,useLowerChars(),useUpperChars(),useNumbers(),useSigns()));
         setSlider();
         passwordLength.setText("Password length: "+length);
         customize.setText("Customize your password");
@@ -57,7 +55,6 @@ public class AppController {
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
                 length = (int) slider.getValue();
                 passwordLength.setText("Password length: "+length);
-               // password.setText(Generator.GeneratePassword(length,useLowerChars(),useUpperChars(),useNumbers(),useSigns()));
                 generator();
             }
         });
@@ -74,7 +71,6 @@ public class AppController {
 
     public void refreshPassword(ActionEvent actionEvent) {
         generator();
-        //password.setText(Generator.GeneratePassword(length,useLowerChars(),useUpperChars(),useNumbers(),useSigns()));
     }
 
     public void minusPassword(ActionEvent actionEvent) {
@@ -98,6 +94,7 @@ public class AppController {
         );
 
     }
+
     public void radioButtonSelected(){
         upperChars.setSelected(true);
         lowerChars.setSelected(true);
@@ -120,22 +117,21 @@ public class AppController {
 
     public void radioButtonAction(ActionEvent actionEvent) {
        generator();
-        // password.setText(Generator.GeneratePassword(length,useLowerChars(),useUpperChars(),useNumbers(),useSigns()));
     }
 
     public void setHowStrong() {
         if(password.getText().length()<7){
-            howStrong.setText("Weak");
-            howStrong.setStyle("-fx-background-color: #ef1e1e");
+            howStrong.setText("WEAK");
+            howStrong.setStyle("-fx-background-color: #e48080");
         } else if(password.getText().length()<10){
-            howStrong.setText("Good");
-            howStrong.setStyle("-fx-background-color: #f1b655");
+            howStrong.setText("GOOD");
+            howStrong.setStyle("-fx-background-color: #efb766");
         } else if(password.getText().length()<13){
-            howStrong.setText("Strong");
-            howStrong.setStyle("-fx-background-color: #57ec57");
+            howStrong.setText("STRONG");
+            howStrong.setStyle("-fx-background-color: #85d185");
         } else {
-            howStrong.setText("Very Strong");
-            howStrong.setStyle("-fx-background-color: #34c1ee");
+            howStrong.setText("VERY STRONG");
+            howStrong.setStyle("-fx-background-color: #7bc6df");
         }
     }
 

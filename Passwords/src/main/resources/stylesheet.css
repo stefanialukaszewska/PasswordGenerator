@@ -13,6 +13,7 @@
     -fx-padding: 10px;
     -fx-spacing: 10px;
     -fx-pref-width: 100px;
+    -fx-alignment: center;
 }
 
 .hbox{
@@ -35,11 +36,12 @@
 
 .button{
     -fx-background-radius: 20px;
-
+    -fx-font-weight: bold;
 }
 
-.refreshButton{
+#refreshButton{
     -fx-background-color: transparent;
+
 }
 
 .sizeButton{
@@ -49,7 +51,7 @@
 
 .label{
     -fx-font-size: 20px;
-    -fx-font-family: "Andale Mono",sans-serif ;
+  /*  -fx-font-family: "Big Caslon",sans-serif ;!*Andale Mono*!*/
 }
 
 .text-field{
@@ -102,7 +104,17 @@
     -fx-background-radius: 20px;
     -fx-padding: 4px;
     -fx-font-weight: bold;
+    -fx-progress-color: white;
 }
+
+.label ,.button{
+    -fx-font-family: Helvetica, serif;
+}
+
+#customize{
+    -fx-text-fill: #526870;
+}
+
 
 
 
